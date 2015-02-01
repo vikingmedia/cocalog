@@ -1,0 +1,9 @@
+{% if trips %}
+    <ul>
+    {% for trip in trips %}
+        <li><a href="/driverslog/trips/{{ trip.id }}/">{{ trip.location_destination }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No trips are available.</p>
+{% endif %}
